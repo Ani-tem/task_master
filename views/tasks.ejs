@@ -1,0 +1,28 @@
+<h2>Your Tasks</h2>
+<a href="/tasks/new">➕ Add New Task</a>
+
+<table border="1">
+    <tr>
+        <th>Title</th>
+        <th>Category</th>
+        <th>Priority</th>
+        <th>Due Date</th>
+        <th>Completed</th>
+        <th>Actions</th>
+    </tr>
+    <% tasks.forEach(task => { %>
+        <tr>
+            <td><%= task.title %></td>
+            <td><%= task.category %></td>
+            <td><%= task.priority %></td>
+            <td><%= task.due_date %></td>
+            <td><%= task.completed ? "✅" : "❌" %></td>
+            <td>
+                <a href="/tasks/<%= task.id %>/edit">✏️ Edit</a>
+                <form action="/tasks/<%= task.id %>/delete" method="POST" style="display:inline;">
+                    <button type="submit">🗑️ Delete</button>
+                </form>
+            </td>
+        </tr>
+    <% }); %>
+</table>

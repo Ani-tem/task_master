@@ -1,0 +1,31 @@
+<h2>Edit Task</h2>
+<form action="/tasks/<%= task.id %>" method="POST" class="edit-task-form">
+    <label>Title:</label>
+    <input type="text" name="title" value="<%= task.title %>" required />
+
+    <label>Description:</label>
+    <textarea name="description"><%= task.description %></textarea>
+
+    <label>Category:</label>
+    <select name="category">
+        <option value="Work" <%= task.category === 'Work' ? 'selected' : '' %>>Work</option>
+        <option value="Personal" <%= task.category === 'Personal' ? 'selected' : '' %>>Personal</option>
+        <option value="Urgent" <%= task.category === 'Urgent' ? 'selected' : '' %>>Urgent</option>
+    </select>
+
+    <label>Priority:</label>
+    <select name="priority">
+        <option value="High" <%= task.priority === 'High' ? 'selected' : '' %>>High</option>
+        <option value="Medium" <%= task.priority === 'Medium' ? 'selected' : '' %>>Medium</option>
+        <option value="Low" <%= task.priority === 'Low' ? 'selected' : '' %>>Low</option>
+    </select>
+
+    <label>Due Date:</label>
+    <input type="date" name="due_date" value="<%= task.due_date ? task.due_date.toISOString().split('T')[0] : '' %>" />
+
+    <label class="checkbox-label">
+        <input type="checkbox" name="completed" value="true" <%= task.completed ? 'checked' : '' %>> Mark as Completed
+    </label>
+
+    <button type="submit">Update Task</button>
+</form>

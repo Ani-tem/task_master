@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/tasks">Tasks</a>
+            <% if (typeof user !== 'undefined' && user) { %>
+                <a href="/">Logout</a>
+            <% } else { %>
+                <a href="/">Login</a>
+            <% } %>
+        </nav>
+    </header>
+
+    <main>
+        <%- body %>  <!-- This will be replaced with the page content -->
+    </main>
+
+    <footer>
+        <p>Task Manager &copy; 2025</p>
+    </footer>
+</body>
+</html>
