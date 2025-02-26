@@ -20,7 +20,7 @@ Other: dotenv, body-parser, method-override
 Installation & Setup 🏗️
 
 1. Clone the repository:
-git clone https://github.com/your-username/task-manager.git
+git clone https://github.com/ani-tem/task_manager.git
 cd task-manager
 
 2. Install dependencies: 
