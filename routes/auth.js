@@ -15,7 +15,7 @@ router.post("/signup", async (req, res) => {
         const hashedPassword = await bcrypt.hash(password, 10);
         await pool.query("INSERT INTO users (username, email, password) VALUES ($1, $2, $3)", [username, email, hashedPassword]);
         
-        res.redirect("/login");
+         res.render('auth', { title: 'Login / Sign Up' })
     } catch (err) {
         console.error("Signup Error:", err);
         res.status(500).send("Error: " + err.message);
