@@ -53,7 +53,6 @@ npm start
 
 ## 📌 Future Improvements
 
-- User authentication and login
 - Categories and task priorities
 - Dark mode support
 
