@@ -13,7 +13,6 @@ A dynamic and responsive Task Management web application built using Node.js, Ex
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: HTML, CSS, EJS
 - **Backend**: Node.js, Express.js
 - **Database**: PostgreSQL
 
